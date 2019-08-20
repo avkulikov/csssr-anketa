@@ -1,0 +1,149 @@
+include ../heading/heading
+include ../text/text
+include ../input/input
+
+mixin skills()
+	+b.skills&attributes(attributes)
+		+e.heading
+			+heading('Расскажите о себе чекбоксами')
+		+e.text
+			+text('Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.')
+		+e.checkbox
+			.col
+				+input({
+					type: 'checkbox',
+					title: 'БЭМ/OOCSS',
+					id : 'bem',
+					name: 'bem',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Pug (Jade)',
+					id: 'prehtml',
+					name: 'prehtml',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Stylus/LESS/SASS',
+					id: 'precss',
+					name: 'precss',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Работаю с SVG',
+					id: 'svg',
+					name: 'svg',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Верстаю семантично',
+					id: 'semantic',
+					name: 'semantic',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Accessibility (A11Y)',
+					id: 'accessibility',
+					name: 'accessibility',
+					checked: false
+				})
+				+input({
+					type: 'checkbox',
+					title: 'ES2015/ES2016',
+					id: 'es',
+					name: 'es',
+					checked: false
+				})
+			.col
+				+input({
+					type: 'checkbox',
+					title: 'Gulp/GRUNT',
+					id: 'gulp',
+					name: 'gulp',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Webpack',
+					id: 'webpack',
+					name: 'webpack',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Дружу с WebGL',
+					id: 'webgl',
+					name: 'webgl',
+					checked: false
+				})
+				+input({
+					type: 'checkbox',
+					title: 'jQuery',
+					id: 'jquery',
+					name: 'jquery',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Знаю/изучаю Angular',
+					id: 'angular',
+					name: 'angular',
+					checked: false
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Знаю/изучаю React',
+					id: 'react',
+					name: 'react',
+					checked: false
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Знаю/изучаю Node.js',
+					id: 'node',
+					name: 'node',
+					checked: false
+				})
+			.col
+				+input({
+					type: 'checkbox',
+					title: 'Использую Git',
+					id: 'git',
+					name: 'git',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'С глазомером всё ок',
+					id: 'perfecteyes',
+					name: 'perfecteyes',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Читаю',
+					a: '<a target="_blank" href="//blog.csssr.ru">blog.csssr.ru</a>',
+					id: 'blog',
+					name: 'blog',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					title: 'Я ленивый(-ая)',
+					id: 'lazy',
+					name: 'lazy',
+					checked: true
+				})
+				+input({
+					type: 'checkbox',
+					label_class: 'inputCheck__label_2row',
+					title: 'У меня хороший английский',
+					id: 'english',
+					name: 'english',
+					checked: true
+				})

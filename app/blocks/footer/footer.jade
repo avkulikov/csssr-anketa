@@ -1,0 +1,11 @@
+include ../input/input
+
+mixin footer()
+	+b.footer.FOOTER&attributes(attributes)
+			+input({
+			type : 'text',
+			title : 'Дата заполнения:',
+			placeholder : 'ДДММГГГГ',
+			value : '28.12.2017',
+			text_class : 'footer__input'
+			})

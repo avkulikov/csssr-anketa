@@ -1,0 +1,42 @@
+include ../heading/heading
+include ../input/input
+
+mixin jsSkills()
+	+b.jsSkills&attributes(attributes)
+		+e.heading
+			+heading('Уровень владения JavaScript')
+		+e.pointer._edit
+		+e.scale
+		+e.labels
+			+e.label._no
+				+input({
+					type: 'radio',
+					name: 'radioJS',
+					radio_class: 'jsSkills__labels jsSkills__labels_radio jsSkills__labels_radio_no',
+					label_class: 'jsSkills__label',
+					title: 'Не владею'
+				})
+			+e.label._use
+				+input({
+					type: 'radio',
+					name: 'radioJS',
+					radio_class: 'jsSkills__labels jsSkills__labels_radio jsSkills__labels_radio_use',
+					label_class: 'jsSkills__label',
+					title: 'Использую готовые решения'
+				})
+			+e.label._edit
+				+input({
+					type: 'radio',
+					name: 'radioJS',
+					radio_class: 'jsSkills__labels jsSkills__labels_radio jsSkills__labels_radio_edit',
+					label_class: 'jsSkills__label',
+					title: 'Использую готовые решения и умею их переделывать'
+				})
+			+e.label._write
+				+input({
+					type: 'radio',
+					name: 'radioJS',
+					radio_class: 'jsSkills__labels jsSkills__labels_radio jsSkills__labels_radio_write',
+					label_class: 'jsSkills__label',
+					title: 'Пишу сложный JS с нуля'
+				})

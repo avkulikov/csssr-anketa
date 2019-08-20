@@ -1,0 +1,44 @@
+include ../input/input
+
+mixin info()
+	+b.info&attributes(attributes)
+		+input({
+			type : 'text',
+			title : 'Полное ФИО',
+			placeholder : 'Фамилия Имя Отчество',
+			value : 'Куликов Артем Валерьевич',
+			id : 'name',
+			text_class: 'inputText__item inputText__item-short'
+		})
+		+input({
+			type: 'text',
+			title: 'Год рождения',
+			placeholder: 'ГГГГ',
+			value: '1993',
+			id: 'year',
+			text_class: 'inputText__item inputText__item-middle'
+		})
+		+input({
+			type: 'text',
+			title: 'Место жительства',
+			placeholder: 'г. Иваново, Россия',
+			value: 'г. Новосибирск, Россия',
+			id: 'city',
+			text_class: 'inputText__item inputText__item-long'
+		})
+		+input({
+			type: 'text',
+			title: 'Скайп',
+			placeholder: 'ivanov',
+			value: 'artem.job.kulikov@gmail.com',
+			id: 'skype',
+			text_class: 'inputText__item inputText__item-vlong'
+		})
+		+input({
+			type: 'text',
+			title: 'Почта',
+			placeholder: 'email@gmail.com',
+			value: 'artem.job.kulikov@gmail.com',
+			id: 'mail',
+			text_class: 'inputText__item inputText__item-vlong'
+		})

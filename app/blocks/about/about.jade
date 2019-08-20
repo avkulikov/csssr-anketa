@@ -1,0 +1,17 @@
+include ../heading/heading
+include ../text/text
+include ../input/input
+
+mixin about()
+	+b.about&attributes(attributes)
+		+e.title
+			+heading('Расскажите о себе словами')
+		+e.description
+			+text('Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.')
+		+e.strings
+			+input({
+				type: 'textarea',
+				placeholder: 'Ну-ууу-уу...\nЭэээ...',
+				value: 'Давно хочу заниматься версткой, в будущем front-end\'\ом в целом. От работы ожидаю хорошего коллектива, опыта и самореализации.',
+				wrap: hard
+			})

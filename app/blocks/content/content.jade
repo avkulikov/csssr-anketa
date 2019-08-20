@@ -1,0 +1,18 @@
+include ../info/info
+include ../skills/skills
+include ../jsSkills/jsSkills
+include ../about/about
+include ../plans/plans
+
+mixin content()
+	+b.content&attributes(attributes)
+		+e.info
+			+info
+		+e.skills
+			+skills
+		+e.jsSkills
+			+jsSkills
+		+e.about
+			+about
+		+e.plans
+			+plans

@@ -1,0 +1,9 @@
+include ../logo/logo
+include ../title/title
+include ../stamp/stamp
+
+mixin header()
+	+b.header.HEADER&attributes(attributes)
+		+logo
+		+title
+		+stamp

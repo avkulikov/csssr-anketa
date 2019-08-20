@@ -1,0 +1,78 @@
+mixin input(config)
+		//- default values
+		- config.text_class = config.text_class || ''
+		- config.textarea_class = config.textarea_class || ''
+		- config.radio_class = config.radio_class || ''
+		- config.check_class = config.check_class || ''
+		- config.label_class = config.label_class || ''
+		- config.placeholder = config.placeholder || ''
+		- config.size = config.size || ''
+		- config.rows = config.rows || ''
+		- config.col = config.col || ''
+		- config.wrap = config.wrap || ''
+		- config.a = config.a || ''
+
+		if config.type === 'text'
+			dl.inputText
+				dt.inputText__label
+					label(for=config.id) #{config.title}
+				dd.inputText__item
+					if config.value
+						input(value=config.value type=config.type id=config.id class='#{config.text_class}' placeholder=config.placeholder)
+						block
+					else
+						input(type=config.type id=config.id class='#{config.text_class}' placeholder=config.placeholder)
+						block
+
+		if config.type === 'textarea'
+			dl.inputTextarea
+				dt.inputTextarea__label
+					label(for=config.id) #{config.title}
+				dd.inputTextarea__item
+					textarea(type=config.type id=config.id class='#{config.textarea_class}' placeholder=config.placeholder rows='#{config.rows}' col='#{config.col}' wrap='#{config.wrap}') #{config.value}
+					block
+				
+		if config.type === 'checkbox'
+			label.inputCheck
+				if config.checked
+					input(name=config.name type=config.type class='inputCheck__item #{config.check_class}' checked='checked')
+				else
+					input(name=config.name type=config.type class='inputCheck__item #{config.check_class}')
+				span.inputCheck__label(class=config.label_class) #{config.title}
+				a!=config.a
+
+		if config.type === 'radio'
+			label.inputRadio
+				if config.checked
+					input(name=config.name type=config.type class='inputRadio__item #{config.radio_class}' checked='checked')
+				else
+					input(name=config.name type=config.type class='inputRadio__item #{config.radio_class}')
+				span.inputRadio__label(class=config.label_class) #{config.title}
+
+//- Все опции
+//- type - тип поля. Возможные значения - ‘text’,’textarea’,’email’,’password’,’checkbox’,’radio’,’select’.Обязательное поле
+//- title - название поля. Обычно находится в dt, за исключением checkbox и radio.Обязательное поле
+//- id - Идентификатор поля.
+//- class_array - массив классов-модификаторов.
+//- add_class - дополнительный класс для поля.
+//- value - атрибут value для поля.
+//- placeholder - атрибут placeholder для поля. Для селектов добавляется в data-placeholder.
+//- options - массив опций. Только для селектов.
+//- name - имя поля. Только для checkbox и radio.
+//- checked - атрибут checked. Только для checkbox и radio.
+//- 
+//- +form_element({
+//-     type:'text',
+//-     class_array:default_field,
+//-     title:'some title',
+//-     id:'#some'
+//- })
+//- +form_element({
+//- 	type: 'checkbox',
+//- 	class_array: default_field,
+//- 	title: 'some title',
+//- 	id: 'id',
+//- 	add_class: 'someclass',
+//- 	name: 'radiobtn',
+//- 	checked: true
+//- })
