@@ -233,3 +233,12 @@ npm run deploy
 ```
 
 ## [Внеси свой вклад в развитие проекта!](https://github.com/CSSSR/csssr-project-template/blob/master/contributing.md)
+
+```ts
+const l = 125;
+```
+
+
+```typescript
+const l = 125;
+```
